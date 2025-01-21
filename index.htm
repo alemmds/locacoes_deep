@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N Pontes Locações</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>N Pontes Locações</h2>
+            <ul>
+                <li><a href="#" data-category="machines"><i class="fas fa-tractor"></i> Máquinas</a></li>
+                <li><a href="#" data-category="receipts"><i class="fas fa-money-bill-wave"></i> Recebimentos</a></li>
+                <li><a href="#" data-category="contracts"><i class="fas fa-file-contract"></i> Contratos</a></li>
+                <li><a href="#" data-category="accounts"><i class="fas fa-file-invoice-dollar"></i> Contas</a></li>
+                <li><a href="#" data-category="companies"><i class="fas fa-building"></i> Empresas</a></li>
+            </ul>
+        </aside>
+        <main class="content">
+            <!-- Mensagem de boas-vindas -->
+            <div id="welcome-message">
+                <h1>BEM-VINDO USUÁRIO!</h1>
+            </div>
+
+            <!-- Botões iniciais (serão exibidos após clicar em uma aba do menu) -->
+            <div id="initial-buttons">
+                <!-- Botões "Acessar Lista" e "Cadastrar Item" serão injetados aqui via JavaScript -->
+            </div>
+
+            <!-- Formulários e listas -->
+            <div id="form-container">
+                <!-- Formulários serão injetados aqui via JavaScript -->
+            </div>
+            <div id="list-container">
+                <!-- Cards serão injetados aqui via JavaScript -->
+            </div>
+
+            <!-- Botão Voltar (inicialmente escondido) -->
+            <button id="back-button" class="back-button" onclick="goBackToInitial()">Voltar</button>
+        </main>
+    </div>
+
+    <!-- Modal de Informações -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title"></h3>
+                <button class="close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-body"></div>
+            <div class="modal-actions">
+                <button class="edit" onclick="editItemFromModal()">Editar</button>
+                <button class="delete" onclick="deleteItemFromModal()">Excluir</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

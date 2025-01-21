@@ -1,0 +1,343 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* Menu Lateral */
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50; /* Azul escuro premium */
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ecf0f1; /* Branco suave */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #ecf0f1; /* Branco suave */
+    text-decoration: none;
+    font-size: 18px; /* Fonte maior */
+    display: flex;
+    align-items: center; /* Alinha ícone e texto verticalmente */
+    padding: 15px;
+    border-radius: 8px; /* Bordas mais arredondadas */
+    transition: all 0.3s ease; /* Transição suave */
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo sutil */
+}
+
+.sidebar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo mais claro no hover */
+    transform: translateX(5px); /* Efeito de deslocamento */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Sombra no hover */
+}
+
+.sidebar ul li a i {
+    margin-right: 15px; /* Espaçamento maior entre ícone e texto */
+    font-size: 20px; /* Ícones um pouco maiores */
+    color: #3498db; /* Azul claro para os ícones */
+}
+
+/* Conteúdo Principal */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Mensagem de boas-vindas */
+#welcome-message {
+    text-align: center;
+    margin-top: 20%;
+    font-size: 36px;
+    color: #2c3e50; /* Azul escuro premium */
+    font-weight: bold;
+    animation: fadeIn 1s ease-in-out; /* Animação de entrada */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Esconder a mensagem de boas-vindas quando os botões aparecerem */
+#welcome-message.hidden {
+    display: none;
+}
+
+/* Botões Iniciais */
+#initial-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+#initial-buttons button {
+    padding: 15px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#initial-buttons button.access-list {
+    background-color: #007bff;
+    color: white;
+}
+
+#initial-buttons button.access-list:hover {
+    background-color: #0056b3;
+}
+
+#initial-buttons button.register-item {
+    background-color: #28a745;
+    color: white;
+}
+
+#initial-buttons button.register-item:hover {
+    background-color: #218838;
+}
+
+/* Formulários */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+/* Cards */
+.card {
+    background-color: #003366; /* Azul escuro */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: white; /* Texto branco */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+/* Campo de Pesquisa */
+.search-container {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.search-container input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    flex-grow: 1;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.search-container button:hover {
+    background-color: #218838;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.modal-header h3 {
+    margin: 0;
+}
+
+.modal-header .close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal-body {
+    margin-bottom: 20px;
+}
+
+.modal-body p {
+    margin: 10px 0;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.modal-actions button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.modal-actions button.edit {
+    background-color: #ffc107;
+    color: black;
+}
+
+.modal-actions button.edit:hover {
+    background-color: #e0a800;
+}
+
+.modal-actions button.delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+.modal-actions button.delete:hover {
+    background-color: #c82333;
+}
+
+/* Botão Voltar */
+.back-button {
+    position: fixed; /* Fixa o botão na tela */
+    top: 20px; /* Distância do topo */
+    right: 20px; /* Distância da direita */
+    padding: 10px 20px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+    display: none; /* Inicialmente escondido */
+}
+
+.back-button:hover {
+    background-color: #5a6268;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+    }
+
+    .content {
+        margin: 10px;
+    }
+}
